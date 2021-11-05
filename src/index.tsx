@@ -1,17 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { Provider } from 'react-redux'
 import { store } from './model/store'
 
+// styles
+import 'antd/dist/antd.css'
+import './index.css'
+import { BrowserRouter } from 'react-router-dom'
+
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
+  <Provider store={store}>
+    <BrowserRouter>
       <App/>
-    </Provider>
-  </React.StrictMode>,
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 )
 
